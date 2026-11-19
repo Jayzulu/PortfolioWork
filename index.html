@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your Name · DevOps Engineer</title>
+<meta name="description" content="Portfolio of a DevOps Engineer and Software Engineer.">
+<meta name="theme-color" content="#07080f">
+<link rel="icon" href="assets/Logo.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="bg" aria-hidden="true"></canvas>
+<div class="glow" id="glow" aria-hidden="true"></div>
+<div class="progress" id="progress"></div>
+
+<header class="nav">
+  <a href="#home" class="logo"><img src="assets/Logo.png" alt="Logo">&lt;<span data-bind="shortName">you</span>/&gt;</a>
+  <nav id="menu">
+    <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a>
+    <a href="#experience">Pipeline</a><a href="#awards">Awards</a><a href="#certs">Certs</a>
+    <a href="#testimonials">Words</a><a href="#contact">Contact</a>
+  </nav>
+  <button class="burger" id="burger" aria-label="Menu"><span></span><span></span></button>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <div class="hero-text">
+    <p class="mono kicker">$ whoami</p>
+    <h1 data-bind="name">Your Name</h1>
+    <h2 class="mono"><span id="typed"></span><span class="caret">▍</span></h2>
+    <p class="lead" data-bind="tagline"></p>
+    <div class="cta">
+      <a href="#projects" class="btn primary">View Projects</a>
+      <a href="#contact" class="btn ghost">Get in touch</a>
+    </div>
+    <div class="status mono"><i class="dot"></i> all systems operational · open to opportunities</div>
+  </div>
+  <div class="hero-side">
+    <div class="avatar-wrap">
+      <div class="ring r1"></div><div class="ring r2"></div>
+      <img id="photo" src="assets/profile.svg" alt="Portrait">
+    </div>
+    <div class="term">
+      <div class="term-bar"><i></i><i></i><i></i><span class="mono">~/pipeline</span></div>
+      <pre class="mono" id="termBody"></pre>
+    </div>
+  </div>
+  <a href="#about" class="scroll mono">scroll ↓</a>
+</section>
+
+<section id="about" class="sec">
+  <h3 class="title"><span class="mono">01.</span> About me</h3>
+  <div class="about reveal">
+    <p data-bind="about"></p>
+    <div class="stats" id="stats"></div>
+  </div>
+</section>
+
+<section id="skills" class="sec">
+  <h3 class="title"><span class="mono">02.</span> Skills</h3>
+  <div class="rings" id="skills-grid"></div>
+</section>
+
+<section id="projects" class="sec">
+  <h3 class="title"><span class="mono">03.</span> Projects</h3>
+  <div class="filters" id="filters"></div>
+  <div class="cards" id="projects-grid"></div>
+</section>
+
+<section id="experience" class="sec">
+  <h3 class="title"><span class="mono">04.</span> Experience <span class="sub mono">// the pipeline</span></h3>
+  <div class="pipeline" id="timeline"></div>
+</section>
+
+<section id="awards" class="sec">
+  <h3 class="title"><span class="mono">05.</span> Achievements &amp; Awards</h3>
+  <div class="awards" id="awards-grid"></div>
+</section>
+
+<section id="certs" class="sec">
+  <h3 class="title"><span class="mono">06.</span> Certificates</h3>
+  <div class="certs" id="certs-grid"></div>
+</section>
+
+<section id="testimonials" class="sec">
+  <h3 class="title"><span class="mono">07.</span> Testimonials</h3>
+  <div class="carousel reveal">
+    <div class="slides" id="slides"></div>
+    <div class="ctrl"><button id="prev" aria-label="Previous">←</button><div id="dots"></div><button id="next" aria-label="Next">→</button></div>
+  </div>
+</section>
+
+<section id="contact" class="sec">
+  <h3 class="title"><span class="mono">08.</span> Resume &amp; Contact</h3>
+  <div class="downloads reveal">
+    <a class="btn primary big" id="dl-resume" href="files/Resume.pdf" download>⬇ Download Resume</a>
+  </div>
+  <div class="socials reveal" id="socials"></div>
+  <div class="contact cta-card reveal">
+    <h4 class="mono">// contact me</h4>
+    <p>Got a question, a project or an opportunity? The best way to reach me is on LinkedIn.</p>
+    <a class="btn primary big" id="liBtn" href="https://www.linkedin.com/in/j-victorino-zulueta-b18730302/" target="_blank" rel="noopener">Message me on LinkedIn →</a>
+  </div>
+</section>
+</main>
+
+<footer class="foot mono">
+  <span>© <span id="year"></span> <span data-bind="name"></span></span>
+  <span class="hint">psst… try the Konami code ↑↑↓↓←→←→BA</span>
+</footer>
+
+<div class="lightbox" id="lightbox"><button aria-label="Close" id="lbClose">✕</button><img alt=""><p class="mono"></p></div>
+
+<script src="script.js"></script>
+</body>
+</html>
